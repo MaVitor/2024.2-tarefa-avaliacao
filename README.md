@@ -3,142 +3,125 @@
 ## Informações gerais
 - **Objetivo do repositório**: Avaliação do 1o bimestre da Disciplina de sistemas operacionais do curso de TADS do IFRN-CNAT
 - **Público alvo**: alunos da disciplina de SO (Sistemas Operacionais) do curso de TADS (Superior em Tecnologia em Análise e Desenvolvimento de Sistemas) no CNAT-IFRN (Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus Natal-Central).
-- disciplina: **SO** Sistemas Operacionais
-- professor: [Leonardo A. Minora](https://github.com/leonardo-minora)
+- **Disciplina**: **SO** Sistemas Operacionais
+- **Professor**: [Leonardo A. Minora](https://github.com/leonardo-minora)
+- **Aluno**: Mateus Vitor Cavalcanti Rodrigues
+- **Matrícula**: 20232014040031
 
-## Avaliação
-- **Lembre de fazer o fork deste repositório**
-- As questões foram construídas com o auxílio do [copilot](https://copilot.microsoft.com/)
+---
 
-# Questão 1. Introdução a sistemas operacionais
+## Questão 1. Introdução a Sistemas Operacionais
 
+**Pergunta:**  
 Considere as funções e objetivos principais de um sistema operacional conforme discutido no texto. Explique como um sistema operacional gerencia os recursos de hardware e software de um computador para garantir eficiência e segurança. Em sua resposta, aborde os seguintes pontos:
 
-- Gerenciamento de processos
-- Gerenciamento de memória
-- Gerenciamento de dispositivos de entrada e saída
-- Gerenciamento de arquivos
+- Gerenciamento de processos  
+- Gerenciamento de memória  
+- Gerenciamento de dispositivos de entrada e saída  
+- Gerenciamento de arquivos  
 
-**Dica**: Pense em exemplos práticos de como o sistema operacional realiza essas tarefas no dia a dia de um usuário.
+**Resposta:**  
 
-**Copilot informa**: Essa questão incentiva os alunos a explorarem os conceitos fundamentais e a aplicarem o conhecimento teórico em situações práticas. Se precisar de mais alguma coisa, estou aqui para ajudar!
+1. **Gerenciamento de Processos:**  
+   O sistema operacional gerencia os processos em execução, garantindo que múltiplos programas possam ser executados simultaneamente. Ele utiliza técnicas como escalonamento para distribuir tempo de CPU, e isolamento para evitar interferências entre processos.  
+   **Exemplo prático:** Quando abrimos várias abas no navegador, o sistema operacional aloca recursos de CPU para cada aba, evitando que uma aba com um erro feche todas as outras.  
 
-# Questão 2. Estrutura de sistemas operacionais
+2. **Gerenciamento de Memória:**  
+   O sistema operacional aloca e monitora o uso de memória pelos processos. Ele utiliza a memória virtual para otimizar o uso da RAM e evitar conflitos entre os processos.  
+   **Exemplo prático:** Ao abrir um editor de texto e uma planilha, o sistema operacional aloca memória suficiente para cada programa funcionar sem ocupar o espaço um do outro.  
 
-## Texto informativo
-### Estrutura de Sistemas Operacionais: Custo de Desenvolvimento e Segurança da Informação
+3. **Gerenciamento de Dispositivos de Entrada e Saída:**  
+   O sistema operacional fornece interfaces para dispositivos como teclado, mouse, disco rígido e impressoras, organizando filas e gerenciando acessos.  
+   **Exemplo prático:** Ao conectar um pendrive, o sistema detecta automaticamente o dispositivo, disponibilizando o acesso aos arquivos nele contidos.  
 
-A estrutura de um sistema operacional (SO) é fundamental para determinar tanto o custo de desenvolvimento e manutenção quanto a segurança da informação. Existem várias arquiteturas de SO, como monolítica, microkernel e em camadas, cada uma com suas próprias implicações em termos de custo e segurança.
+4. **Gerenciamento de Arquivos:**  
+   O sistema organiza, armazena e recupera arquivos, utilizando sistemas de arquivos como FAT32 ou NTFS para gerenciar permissões, hierarquias e acessos.  
+   **Exemplo prático:** Ao salvar um documento no computador, o sistema operacional organiza o arquivo no disco, permitindo sua recuperação posterior.
 
-#### Custo de Desenvolvimento e Manutenção
+---
 
-1. **Arquitetura Monolítica**:
-   - **Desenvolvimento**: Geralmente, mais rápida de desenvolver inicialmente, pois todos os componentes do SO são integrados em um único bloco de código.
-   - **Manutenção**: Pode ser mais complexa e cara, pois qualquer alteração em um componente pode afetar todo o sistema, exigindo testes extensivos e cuidadosos.
+## Questão 2. Estrutura de Sistemas Operacionais
 
-2. **Arquitetura Microkernel**:
-   - **Desenvolvimento**: Pode ser mais demorada e cara inicialmente, pois envolve a criação de um núcleo mínimo e a implementação de serviços adicionais como processos separados.
-   - **Manutenção**: Mais fácil e menos custosa, já que os componentes são isolados. Atualizações e correções podem ser feitas em módulos específicos sem impactar o núcleo do sistema.
-
-3. **Arquitetura em Camadas**:
-   - **Desenvolvimento**: Moderadamente complexa, pois cada camada deve ser bem definida e interagir corretamente com as outras.
-   - **Manutenção**: Relativamente fácil, pois problemas podem ser isolados e corrigidos em camadas específicas sem afetar o restante do sistema.
-
-#### Segurança da Informação
-
-1. **Arquitetura Monolítica**:
-   - **Segurança**: Pode ser mais vulnerável, pois uma falha em qualquer parte do sistema pode comprometer todo o SO. A integração de todos os componentes em um único bloco de código pode dificultar a implementação de medidas de segurança robustas.
-
-2. **Arquitetura Microkernel**:
-   - **Segurança**: Geralmente mais segura, pois isola os serviços em processos separados. Isso limita o impacto de uma falha ou ataque a um único componente, protegendo o núcleo do sistema e outros serviços.
-
-3. **Arquitetura em Camadas**:
-   - **Segurança**: Oferece um bom equilíbrio, pois cada camada pode implementar suas próprias medidas de segurança. No entanto, a comunicação entre camadas deve ser cuidadosamente gerenciada para evitar vulnerabilidades.
-
-### Conclusão
-
-A escolha da arquitetura de um sistema operacional tem um impacto significativo tanto no custo de desenvolvimento e manutenção quanto na segurança da informação. Arquiteturas monolíticas podem ser mais rápidas e baratas de desenvolver inicialmente, mas podem acarretar custos de manutenção mais altos e maiores riscos de segurança. Por outro lado, arquiteturas microkernel e em camadas podem exigir um investimento inicial maior, mas oferecem vantagens em termos de manutenção e segurança.
-
-## Questão
+**Pergunta:**  
 Com base no texto sobre a estrutura de sistemas operacionais, analise como as diferentes arquiteturas (monolítica, microkernel e camadas) impactam o custo com a equipe de desenvolvimento e a segurança do sistema operacional. Em sua resposta, considere os seguintes pontos:
-- Complexidade de implementação e manutenção
-- Necessidade de especialização da equipe
-- Potenciais vulnerabilidades de segurança
-- Facilidade de atualização e correção de falhas
 
-**Dica:** Utilize exemplos de sistemas operacionais reais que adotam essas arquiteturas para ilustrar sua análise.
+- Complexidade de implementação e manutenção  
+- Necessidade de especialização da equipe  
+- Potenciais vulnerabilidades de segurança  
+- Facilidade de atualização e correção de falhas  
 
-**Copilot informa**: Essa questão incentiva os alunos a considerarem tanto os aspectos econômicos quanto os de segurança ao avaliar diferentes arquiteturas de sistemas operacionais.
+**Resposta:**  
 
-# Questão 3. Introdução à Segurança de Sistemas Operacionais
+| Arquitetura      | Complexidade de Implementação | Necessidade de Especialização | Vulnerabilidades de Segurança          | Facilidade de Atualização            |
+|-------------------|-------------------------------|--------------------------------|----------------------------------------|---------------------------------------|
+| **Monolítica**   | Baixa                         | Menor                          | Alta, devido à integração do código   | Difícil, pois mudanças afetam todo o sistema |
+| **Microkernel**  | Alta                          | Maior                          | Baixa, graças ao isolamento dos módulos | Fácil, pois atualizações são isoladas |
+| **Camadas**      | Moderada                      | Moderada                       | Moderada, com riscos na comunicação entre camadas | Moderada, dependendo da camada afetada |
 
-## Texto informativo
+**Exemplo prático:**  
+- **Monolítica:** O Linux tradicional é monolítico, mas sua modularidade ajuda a gerenciar partes do sistema.  
+- **Microkernel:** O Minix usa essa arquitetura, com o kernel responsável apenas por funções básicas, aumentando a segurança.  
+- **Camadas:** O THE (Teaching OS) foi um exemplo clássico de sistema em camadas, onde cada nível executa funções específicas.
 
-A segurança de um sistema operacional é um aspecto crucial que visa proteger os recursos do sistema contra acessos não autorizados, ataques maliciosos e falhas. Um sistema operacional seguro deve garantir a integridade, confidencialidade e disponibilidade dos dados e serviços. Para alcançar esses objetivos, várias técnicas e mecanismos são implementados, incluindo:
+---
 
-1. **Controle de Acesso**: Define quem pode acessar o sistema e quais recursos podem ser utilizados. Isso é feito através de autenticação (verificação de identidade) e autorização (permissão de acesso).
+## Questão 3. Introdução à Segurança de Sistemas Operacionais
 
-2. **Criptografia**: Utilizada para proteger dados em trânsito e em repouso, garantindo que apenas usuários autorizados possam acessar informações sensíveis.
-
-3. **Auditoria e Monitoramento**: Registra atividades do sistema para detectar e responder a comportamentos suspeitos ou anômalos.
-
-4. **Isolamento de Processos**: Garante que os processos sejam executados em ambientes isolados, evitando que um processo comprometa a segurança de outro.
-
-5. **Atualizações e Patches**: Manter o sistema operacional atualizado é essencial para corrigir vulnerabilidades conhecidas e proteger contra novas ameaças.
-
-
-## Questão
-
+**Pergunta:**  
 Considerando os mecanismos de segurança discutidos, analise como a implementação de controles de acesso e criptografia pode impactar a performance e a usabilidade de um sistema operacional. Em sua resposta, aborde os seguintes pontos:
-- Benefícios e desafios de cada mecanismo
-- Impacto na experiência do usuário
-- Exemplos de situações onde esses mecanismos são críticos
 
-**Dica:** Pense em como esses mecanismos são aplicados em sistemas operacionais que você utiliza no dia a dia, como Windows, Linux ou macOS.
+- Benefícios e desafios de cada mecanismo  
+- Impacto na experiência do usuário  
+- Exemplos de situações onde esses mecanismos são críticos  
 
-**Copilot informa**: Essa questão incentiva os alunos a refletirem sobre o equilíbrio entre segurança, performance e usabilidade, aplicando conceitos teóricos a contextos práticos.
+**Resposta:**  
 
+1. **Controle de Acesso:**  
+   - **Benefícios:** Impede acessos não autorizados e garante a confidencialidade.  
+   - **Desafios:** Pode dificultar o uso se exigir autenticação frequente.  
+   - **Impacto na experiência:** Processos adicionais como autenticação por senha ou biometria podem ser inconvenientes.  
+   **Exemplo:** Ao acessar um servidor remoto, o controle de acesso impede que usuários não autorizados entrem no sistema.  
 
-# Questão 4. Custo de Processamento versus Algoritmo Ótimo de Escalonamento
+2. **Criptografia:**  
+   - **Benefícios:** Garante a segurança de dados em trânsito e armazenados.  
+   - **Desafios:** Consome recursos computacionais, reduzindo a performance.  
+   - **Impacto na experiência:** Processos mais lentos podem ocorrer ao transferir arquivos grandes.  
+   **Exemplo:** Ao enviar dados bancários via internet, a criptografia impede que informações sejam interceptadas.  
 
-## Texto informativo
+---
 
-O escalonamento de processos é uma função crítica de um sistema operacional, responsável por determinar a ordem em que os processos são executados pelo processador. O objetivo é maximizar a eficiência do sistema, garantindo que os recursos sejam utilizados de maneira justa e eficaz. No entanto, encontrar o algoritmo de escalonamento ótimo envolve um equilíbrio delicado entre o custo de processamento e a eficiência do escalonamento.
+## Questão 4. Custo de Processamento versus Algoritmo Ótimo de Escalonamento
 
-### Custo de Processamento
+**Pergunta:**  
+Considere os conceitos de custo de processamento e algoritmo ótimo de escalonamento. Analise como diferentes algoritmos de escalonamento podem impactar a performance de um sistema operacional em termos de tempo de resposta, tempo de espera e utilização do processador.  
 
-O custo de processamento refere-se ao tempo e aos recursos necessários para executar um algoritmo de escalonamento. Algoritmos mais complexos podem oferecer melhores resultados em termos de tempo de resposta e utilização do processador, mas também podem exigir mais recursos computacionais para tomar decisões de escalonamento. Isso pode incluir tempo de CPU, memória e outras operações de sistema.
+**Resposta:**  
 
-### Algoritmo Ótimo de Escalonamento
+| Algoritmo       | Vantagens                                           | Desvantagens                                         | Situação Ideal                                      |
+|------------------|----------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
+| **FCFS**        | Simples de implementar                             | Pode causar o problema de "convoy effect"          | Uso em sistemas onde a ordem é mais importante que a velocidade |
+| **Round Robin** | Justo, todos os processos têm tempos iguais         | Overhead elevado devido à troca de contexto        | Sistemas interativos, como terminais de usuário   |
 
-Um algoritmo ótimo de escalonamento é aquele que maximiza a eficiência do sistema operacional, minimizando o tempo de espera dos processos, o tempo de resposta e o tempo de retorno. Alguns dos algoritmos de escalonamento mais comuns incluem:
+**Exemplo prático:**  
+- **FCFS:** Processamento de tarefas na fila de uma impressora.  
+- **Round Robin:** Uso em servidores compartilhados para atender múltiplos clientes.
 
-- **First-Come, First-Served (FCFS)**: Simples e fácil de implementar, mas pode levar a longos tempos de espera para processos curtos.
-- **Shortest Job Next (SJN)**: Minimiza o tempo médio de espera, mas pode ser difícil de implementar devido à necessidade de prever o tempo de execução dos processos.
-- **Round Robin (RR)**: Oferece uma abordagem justa, atribuindo fatias de tempo iguais a todos os processos, mas pode resultar em maior sobrecarga de contexto.
-- **Priority Scheduling**: Processos com maior prioridade são executados primeiro, mas pode levar à inanição de processos de baixa prioridade.
+---
 
-## Questão
+## Questão 5. Aplicativo em Python vs Aplicativos em C
 
-Considerando os conceitos de custo de processamento e algoritmo ótimo de escalonamento, analise como diferentes algoritmos de escalonamento podem impactar a performance de um sistema operacional em termos de tempo de resposta, tempo de espera e utilização do processador. Em sua resposta, aborde os seguintes pontos:
-- Vantagens e desvantagens de pelo menos dois algoritmos de escalonamento
-- Impacto do custo de processamento na escolha do algoritmo
-- Exemplos de situações onde um algoritmo pode ser preferível a outro
+**Pergunta:**  
+Explique o caminho que as instruções seguem desde um aplicativo escrito em Python e um aplicativo escrito em linguagem C até serem executadas pelo hardware.  
 
-**Dica:** Pense em como esses algoritmos são aplicados em diferentes cenários, como sistemas de tempo real, servidores web e sistemas operacionais de uso geral.
+**Resposta:**  
 
-**Copilot informa**: Essa questão incentiva os alunos a refletirem sobre a complexidade e os trade-offs envolvidos na escolha de um algoritmo de escalonamento, aplicando conceitos teóricos a contextos práticos.
+| Etapa                | Python                                   | C                                       |
+|----------------------|------------------------------------------|-----------------------------------------|
+| **Tradução**         | Interpretado (em tempo de execução)      | Compilado (transformado em binário)     |
+| **Velocidade**       | Mais lento devido à interpretação        | Mais rápido, já executa código binário  |
+| **Kernel/Drivers**   | Ambos interagem com kernel e drivers para acesso ao hardware | Ambos interagem com kernel e drivers para acesso ao hardware |
 
-# Questão 5. Aplicativo em python vs aplicativos em c
+**Exemplo prático:**  
+- **Python:** Um script para automação de tarefas.  
+- **C:** Desenvolvimento de sistemas embarcados que exigem alta performance.
 
-## Questão
-
-Explique o caminho que as instruções seguem desde um aplicativo escrito em Python e um aplicativo escrito em linguagem C até serem executadas pelo hardware. Em sua resposta, considere os seguintes pontos:
-- O papel do interpretador no caso do Python
-- O processo de compilação no caso do C
-- A interação entre o kernel do sistema operacional e os drivers de dispositivo
-- A tradução final das instruções para o formato binário (0 e 1) executado pelo hardware
-
-**Dica:** Compare e contraste os dois processos, destacando as principais diferenças e semelhanças na forma como as instruções são processadas e executadas.
-
-**Copilot informa**: Essa questão incentiva os alunos a refletirem sobre os diferentes caminhos que as instruções seguem em linguagens interpretadas e compiladas, aplicando conceitos teóricos a contextos práticos.
